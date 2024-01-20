@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my-kasa-app/static/css/main.e6c13ad2.css",
+    "main.js": "/my-kasa-app/static/js/main.9037f392.js",
+    "static/js/787.bd8eb201.chunk.js": "/my-kasa-app/static/js/787.bd8eb201.chunk.js",
+    "index.html": "/my-kasa-app/index.html",
+    "main.e6c13ad2.css.map": "/my-kasa-app/static/css/main.e6c13ad2.css.map",
+    "main.9037f392.js.map": "/my-kasa-app/static/js/main.9037f392.js.map",
+    "787.bd8eb201.chunk.js.map": "/my-kasa-app/static/js/787.bd8eb201.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.9037f392.js"
+  ]
+}

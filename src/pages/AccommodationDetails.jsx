@@ -1,9 +1,10 @@
 // AccommodationDetails.jsx
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import accommodationsData from '../data/accommodation.json';
-import Carousel from '../components/Carousel';
-import StarRating from '../components/StarRating'
+import React from "react";
+import { useParams } from "react-router-dom";
+import accommodationsData from "../data/accommodation.json";
+import Carousel from "../components/Carousel";
+import StarRating from "../components/StarRating";
+import Accordion from "../components/Accordion";
 import "../styles/tamplets/AccommodationDetails.scss";
 
 function AccommodationDetails() {
@@ -21,51 +22,58 @@ function AccommodationDetails() {
     );
   }
 
-  const { pictures, title, location, tags, host, description, equipments, rating } = selectedAccommodation;
-
+  const {
+    pictures,
+    title,
+    location,
+    tags,
+    host,
+    description,
+    equipments,
+    rating,
+  } = selectedAccommodation;
+  const parsedRating = parseInt(rating);
   return (
-    <div className='contenaire'>
+    <div className="contenaire">
       <Carousel images={pictures} />
-      <div className='souContAB'>
-      <div className='souContA'>
-        <h2>{title}</h2>
-        <p>{location}</p>
-        <div className='tags-container'>
-          {tags.map((tag, index) => (
-            <span key={index} className='tag'>{tag}</span>
-          ))}
-        </div>
-        <div className='description'>
-        <h3>description</h3>
-        <p>{description}</p>
-      </div>
-      </div>
-      <div className='souContB'>
-        <div className='host-info'>
-          <h2>{host.name}</h2>
-          <div className='host-picture'>
-            <img src={host.picture} alt={host.name}></img>
-
+      <div className="souContAB">
+        <div className="souContA">
+          <h2>{title}</h2>
+          <p>{location}</p>
+          <div className="tags-container">
+            {tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+              </span>
+            ))}
           </div>
-     
-        
-        </div>
-
-        <div className='stars'>     
-<StarRating rating={parseInt(rating)} />
-
-   
-        </div>
-        <div className='equipement'>
-        <h3>Equipement</h3>
-          <p>{equipments.join(', ')}</p>
+          <div className="description">
+            <h3>Description</h3>
+            <p>{description}</p>
           </div>
-      </div>
-      
-      </div>
+        </div>
+        <div className="souContB">
+          <div className="host-info">
+            <h2>{host.name}</h2>
+            <div className="host-picture">
+              <img src={host.picture} alt={host.name}></img>
+            </div>
+          </div>
+          <div className="stars">
+            <StarRating ratingValue={parsedRating} />
+          </div>
+        </div>
+        <div className="description">
+  <Accordion title="Description" items={[description]} />
+</div>
+<div className="equipement">
+  <Accordion title="Equipement" items={equipments} />
+</div>
 
+       
+      </div>
+      <div></div>
     </div>
-    
   );
 }
 

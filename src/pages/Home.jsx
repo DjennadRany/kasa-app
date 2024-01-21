@@ -6,7 +6,7 @@ import HubInfo from '../components/HubInfo'; // Ajustez le chemin d'importation
 function Home() {
   return (
     <div>
-      <Banner text="Bienvenue sur notre site" />
+      <Banner text="Chez vous, partout et ailleurs" />
       <HubInfo />
       {/* Ajoutez le contenu de votre page d'accueil ici */}
     </div>

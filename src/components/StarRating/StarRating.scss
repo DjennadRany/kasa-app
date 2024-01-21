@@ -6,15 +6,20 @@
     align-items: center;
     margin-bottom: 20px;
     justify-content: flex-end;
-    cursor: default;
-    pointer-events: none;
+  
+   
 }
-.rating {
-    user-select: none; // Désactive la sélection de texte
-    cursor: default; // Défini le curseur par défaut
-    display: inline-flex;
+.star-rating {
+    display: flex;
+    align-items: center;
   }
   
-  .star-rating {
-    pointer-events: none; // Désactiver les interactions
-  }  
+  .rating {
+    user-select: none;
+    cursor: default;
+  }
+
+  // StarRating.scss
+.star-rating .rating {
+    background: #FF6060; // Couleur de remplissage des étoiles
+  }

@@ -1,19 +1,17 @@
 // StarRating.jsx
 import React from 'react';
-import { Rating } from 'react-simple-star-rating';
-import './StarRating.scss'; // Ajoutez cette ligne pour inclure le fichier de style
+import Rating from 'react-rating-stars-component';
+import './StarRating.scss';
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ ratingValue }) => {
   return (
     <div className="star-rating">
       <Rating
-        onClick={() => {}} // Garder cette ligne même si elle est vide
-        readOnly
-        size={30}
-        ratingValue={rating}
-        fillColor='#FF6060'
-        emptyColor='#E3E3E3'
-        strokeColor='#E3E3E3'
+        count={5}
+        value={ratingValue}
+        size={80}
+        activeColor='#FF6060'
+        edit={false}
       />
     </div>
   );

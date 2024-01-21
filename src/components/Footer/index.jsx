@@ -1,21 +1,15 @@
 // Footer.jsx
 import React from 'react';
+import "./Footer.scss";
+import logo from '../../assets/LOGOblanc.png'; // Remplacez par le chemin réel de votre logo
 
 function Footer() {
   return (
-    <footer style={footerStyle}>
-      <p>&copy; 2024 Your Website Name</p>
+    <footer className="footer">
+      <img src={logo} alt="Logo" className="logo" />
+      <p>&copy; 2020 Kasa. All rights reserved</p>
     </footer>
   );
 }
-
-const footerStyle = {
-  backgroundColor: '#f4f4f4',
-  padding: '10px',
-  textAlign: 'center',
-  position: 'relative',
-  bottom: '0',
-  width: '100%',
-};
 
 export default Footer;

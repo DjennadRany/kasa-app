@@ -6,9 +6,9 @@
   justify-content: space-around;
   align-items: flex-start;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
+  gap: 3em;
   width: 80%;
-  margin: auto;
+  margin: 2em auto;
 
   .hub-block {
     width: auto;
@@ -22,6 +22,8 @@
     background: no-repeat;
     width: 100%;
     background-size: cover;
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+    margin-bottom: 20px; /* Ajoutez une marge en bas pour séparer les blocs */
 
     &:hover {
       transform: scale(1.05);
@@ -32,6 +34,8 @@
       padding: 10px;
       margin-top: 20vh;
       background: rgba(255, 255, 255, 0.8);
+      width: 100%;
+ 
     }
   }
 

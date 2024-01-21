@@ -1,0 +1,27 @@
+// Footer.scss
+$desktop-font-size: 16px;
+
+.footer {
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
+  width: auto;
+  min-height: 209px;
+  position : relative;
+  bottom : auto;
+  p {
+  color: white;
+    font-size: $desktop-font-size;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .logo {
+    
+    display: block;
+    margin: 3em  auto;
+    display: block;
+    margin: 3em auto;
+    width: 6%;
+  }
+}

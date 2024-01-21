@@ -1,0 +1,31 @@
+.error-container {
+  text-align: center;
+  color: #FF6060;
+  min-height: 80vh;
+  .error-message {
+    width: 597px;
+    height: 263px;
+    font-size: 16em;
+margin: auto;
+ 
+  }
+
+  .error-title {
+    width: 872px;
+    height: 51px;
+    font-size: 36px;
+    line-height: 51.34px;
+    font-family: "Montserrat";
+    font-weight: 900;
+    margin: 3em auto;
+    
+  }
+
+  .additional-paragraph {
+    width: 284px;
+    height: 26px;
+    position: relative;
+    margin: 16em auto;
+ 
+  }
+}

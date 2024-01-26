@@ -1,9 +1,10 @@
-<<<<<<< HEAD
+
 // Footer.scss
-$desktop-font-size: 16px;
+
 
 .footer {
   background-color: #000000;
+  $desktop-font-size: 16px;
   padding: 10px;
   text-align: center;
   width: auto;
@@ -26,32 +27,3 @@ $desktop-font-size: 16px;
     width: 6%;
   }
 }
-=======
-// Footer.scss
-$desktop-font-size: 16px;
-
-.footer {
-  background-color: #000000;
-  padding: 10px;
-  text-align: center;
-  width: auto;
-  min-height: 209px;
-  position : relative;
-  bottom : auto;
-  p {
-  color: white;
-    font-size: $desktop-font-size;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .logo {
-    
-    display: block;
-    margin: 3em  auto;
-    display: block;
-    margin: 3em auto;
-    width: 6%;
-  }
-}
->>>>>>> cd2e37f32070815140cf13fd8cae1edc3234e864

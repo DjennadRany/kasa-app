@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .stars {
     width: 80%;
     margin: auto;
@@ -23,30 +22,4 @@
   // StarRating.scss
 .star-rating .rating {
     background: #FF6060; // Couleur de remplissage des étoiles
-=======
-.stars {
-    width: 80%;
-    margin: auto;
-    float: right;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: flex-end;
-  
-   
-}
-.star-rating {
-    display: flex;
-    align-items: center;
-  }
-  
-  .rating {
-    user-select: none;
-    cursor: default;
-  }
-
-  // StarRating.scss
-.star-rating .rating {
-    background: #FF6060; // Couleur de remplissage des étoiles
->>>>>>> cd2e37f32070815140cf13fd8cae1edc3234e864
   }

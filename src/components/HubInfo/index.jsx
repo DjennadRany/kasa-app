@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import accommodationsData from "../../data/accommodation.json";
@@ -18,9 +19,10 @@ function HubInfo() {
           to={`/accommodation/${accommodation.id}`}
           className="hub-block"
           style={{ backgroundImage: `url(${accommodation.cover})` }}
-        >
+        ><div className="linear">
           <h3>{accommodation.title}</h3>
           <p>{accommodation.location}</p>
+          </div>
         </Link>
       ))}
     </div>
@@ -28,3 +30,4 @@ function HubInfo() {
 }
 
 export default HubInfo;
+

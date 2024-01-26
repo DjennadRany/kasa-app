@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Banner.scss
 .banner {
     background-image: url('../../assets/banner/banner-background1.jpg'); // Chemin vers l'image de fond
@@ -17,24 +17,3 @@
       font-size: 24px; // Taille du texte
     }
   }
-=======
-// Banner.scss
-.banner {
-    background-image: url('../../assets/banner/banner-background1.jpg'); // Chemin vers l'image de fond
-    background-size: cover;
-    background-position: center;
-    height: 250px; // Ajustez la hauteur selon vos besoins
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    border-radius: 1em;
-  
-    h2 {
-      color: #fff; // Couleur du texte
-      font-size: 24px; // Taille du texte
-    }
-  }
->>>>>>> cd2e37f32070815140cf13fd8cae1edc3234e864
-  

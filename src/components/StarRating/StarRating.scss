@@ -1,0 +1,25 @@
+.stars {
+    width: 80%;
+    margin: auto;
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+  
+   
+}
+.star-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating {
+    user-select: none;
+    cursor: default;
+  }
+
+  // StarRating.scss
+.star-rating .rating {
+    background: #FF6060; // Couleur de remplissage des étoiles
+  }

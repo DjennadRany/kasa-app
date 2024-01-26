@@ -1,0 +1,69 @@
+// Carousel.scss
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 15px;
+
+  .carousel-slide {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 415px; 
+    opacity: 0;
+    transform: translateY(100%);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    &.active {
+      transform: translateX(0%);
+      transform: rotate(0deg);
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; /* Pour centrer l'image horizontalement */
+      transition: transform 0.5s ease, opacity 0.5s ease; 
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: -93.5%;
+    display: block;
+    position: relative;
+    top: -220px;
+  }
+
+  .slick-prev img,
+  .slick-next img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-prev::before {
+    content: url('../../assets/arrow-left.png');
+  }
+
+  .slick-next::before {
+    content: url('../../assets/arrow-right.png');
+  }
+}

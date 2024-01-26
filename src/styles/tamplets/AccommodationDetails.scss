@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // AccommodationDetails.scss
 // ... (le reste du code)
 .contenaire {
@@ -80,4 +81,87 @@ img {
     }
   }
 }
+=======
+// AccommodationDetails.scss
+// ... (le reste du code)
+.contenaire {
+    width: 80%;
+    margin: auto;
+
+.souContAB {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #ff6060;
+    gap:1em;
+
+.souContA {
+    
+    padding: 20px;
+ 
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  
+    .tags-container {
+      display: flex;
+      gap: 10px;
+  
+      .tag {
+        background-color: #ff6060;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .souContB {
+    padding: 20px;
+  
+    .host-info {
+        display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+  
+      h2 {
+        margin-right: 73px;
+        width: 15%;
+        font-weight: 500;
+        font-size: x-large;
+      }
+  
+      .host-picture {
+        width: 150px;
+        height: 150px;
+        background-color: #000;
+        border-radius: 50%;
+        overflow: hidden;
+  
+       
+
+img {
+    background-size: cover;
+    width: 100%;
+}
+      }
+    }
+  
+    .description-equipments {
+      p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+>>>>>>> cd2e37f32070815140cf13fd8cae1edc3234e864
 }

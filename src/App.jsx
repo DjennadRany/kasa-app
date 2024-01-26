@@ -15,7 +15,7 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/my-kasa-app" element={<Home />} />
           <Route path="/accommodation/:id" element={<AccommodationDetails />} />
           <Route path="/about" element={<About />} /> 
           <Route path="*" element={<Error />} />

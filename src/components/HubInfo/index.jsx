@@ -1,16 +1,9 @@
+// HubInfo.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './HubInfo.scss';
 
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import accommodationsData from "../../data/accommodation.json";
-import "./HubInfo.scss";
-
-function HubInfo() {
-  const [accommodations, setAccommodations] = useState([]);
-
-  useEffect(() => {
-    setAccommodations(accommodationsData);
-  }, []);
-
+function HubInfo({ accommodations }) {
   return (
     <div className="hub-info">
       {accommodations.map((accommodation) => (
@@ -19,9 +12,10 @@ function HubInfo() {
           to={`/accommodation/${accommodation.id}`}
           className="hub-block"
           style={{ backgroundImage: `url(${accommodation.cover})` }}
-        ><div className="linear">
-          <h3>{accommodation.title}</h3>
-          <p>{accommodation.location}</p>
+        >
+          <div className="linear">
+            <h3>{accommodation.title}</h3>
+            <p>{accommodation.location}</p>
           </div>
         </Link>
       ))}
@@ -30,4 +24,3 @@ function HubInfo() {
 }
 
 export default HubInfo;
-

@@ -9,26 +9,52 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 415px; 
+    height: 415px;
     opacity: 0;
     transform: translateY(100%);
     transform: rotate(45deg);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: translateX(0%);
+    transform: rotate(0deg);
+    transform: translateY(0);
+    opacity: 1;
 
-    &.active {
-      transform: translateX(0%);
-      transform: rotate(0deg);
-      transform: translateY(0);
-      opacity: 1;
+
+    .slick-prev {
+      left: 0;
     }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-prev img,
+    .slick-next img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .slick-prev img::before,
+    .slick-next img::before {
+      content: none; // Pour supprimer le contenu généré par les flèches par défaut
+    }
+
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center; /* Pour centrer l'image horizontalement */
-      transition: transform 0.5s ease, opacity 0.5s ease; 
-    }
+      object-position: center;
+      /*Pourcentrerl'imagehorizontalement*/transition: transform 0.5s ease, opacity 0.5s ease;
+      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+      -moz-transition: transform 0.5s ease, opacity 0.5s ease;
+      -ms-transition: transform 0.5s ease, opacity 0.5s ease;
+      -o-transition: transform 0.5s ease, opacity 0.5s ease;
+}
   }
 
   .slick-prev,
@@ -65,5 +91,89 @@
 
   .slick-next::before {
     content: url('../../assets/arrow-right.png');
+  }
+  @media (max-width: 900px) {
+    .carousel-slide {
+      width: 85vh;
+      height: 20vh;
+      .slick-slider {
+        margin: 0 auto; /* Pour centrer le slider horizontalement */
+      }
+      .slick-next {
+        right: 50%; // Ajustez la position horizontale au centre
+        transform: translateX(50%); // Ajustez la position horizontale au centre
+        display: block;
+        position: absolute; // Utilisez une position absolue pour se positionner correctement
+        bottom: 20px; // Ajustez la position verticale en fonction de vos besoins
+        z-index: 1;
+        cursor: pointer;
+      }
+      .slick-slider.slick-initialized {
+        display: flex;
+        flex-direction: column; // Ajustez la direction en fonction de vos besoins
+      }
+      
+      .slick-list {
+        flex: 1; // Faites en sorte que la liste occupe l'espace restant
+      }
+      
+      .slick-arrow {
+        align-self: flex-end; // Alignez les flèches sur le côté droit
+        margin-top: auto; // Faites en sorte qu'elles soient au bas du conteneur
+      }
+    }
+    .carousel-slide {
+      width: 85vh;
+      height: 20vh;
+      
+      .slick-next {
+        right: 50%;
+        transform: translateX(50%);
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        z-index: 1;
+        cursor: pointer;
+      }
+      
+      .slick-prev,
+      .slick-next {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+
+      .slick-list {
+        position: relative; // Ajoutez cette ligne pour que les flèches restent dans le conteneur
+      }
+      
+      .slick-slider.slick-initialized {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .slick-list,
+      .slick-track {
+        flex: 1;
+      }
+      
+      .slick-arrow {
+        align-self: flex-end;
+        margin-top: auto;
+      }
+    }
+    .slick-next {
+      right: -79.5%;
+      display: block;
+      position: relative;
+      top: -123px;
+    }
+    .slick-prev {
+      left: 10px;
+      top: 37%;
+  }
   }
 }

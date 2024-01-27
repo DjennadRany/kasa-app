@@ -1,42 +1,63 @@
 // Header.scss
-$desktop-font-size: 16px;
-
 .header {
-  background-color: #ffffff;
-  color: #ff6060;
-  padding: 10px;
+  background-color: #fff;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
- // .logo-container {
-    // Ajoutez ici le style pour le conteneur du logo
- // }
-
-  img.logo {
-    margin: 2em 8em;
-}
-
-
-nav.nav {
-  width: 80%;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10%;
-
-
-  .nav-list {
-    list-style: none;
+  .logo-container {
+    flex: 1; // Utilise l'espace disponible
     display: flex;
-  }
+    align-items: center;
 
-  .nav-item {
-    margin-right: 15px;
-    font-size: $desktop-font-size;
-    a {
-      text-decoration: none;
-      color: #ff6060;
+    .logo {
+      max-width: 100%;
+      height: auto;
+      margin-left: 10%;
     }
   }
-}
+
+  .nav {
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      .nav-item {
+        margin-right: 20px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          font-size: 16px;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: #FF6060;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive styles for screens smaller than 768px
+  @media (max-width: 900px) {
+
+
+    .nav {
+      margin-top: 20px;
+
+      .nav-list {
+        margin: auto 3em;
+
+        .nav-item {
+          margin-right: 25px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }

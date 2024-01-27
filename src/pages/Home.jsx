@@ -1,15 +1,20 @@
-
 // Home.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Banner from '../components/Banner';
-import HubInfo from '../components/HubInfo'; // Ajustez le chemin d'importation
+import HubInfo from '../components/HubInfo';
+import accommodationsData from '../data/accommodation.json';
 
 function Home() {
+  const [accommodations, setAccommodations] = useState([]);
+
+  useEffect(() => {
+    setAccommodations(accommodationsData);
+  }, []);
+
   return (
     <div>
       <Banner text="Chez vous, partout et ailleurs" />
-      <HubInfo />
-      {/* Ajoutez le contenu de votre page d'accueil ici */}
+      <HubInfo accommodations={accommodations} />
     </div>
   );
 }

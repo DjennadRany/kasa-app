@@ -7,7 +7,7 @@ function Error() {
     <div className="error-container">
       <p className="error-message">404</p>
       <h1 className="error-title">Oups! La page que vous demandez n'existe pas.</h1>
-      <p className="additional-paragraph"><Link to="/">Retourner sur la page d’accueil</Link></p>
+      <p className="additional-paragraph"><Link to="/my-kasa-app/">Retourner sur la page d’accueil</Link></p>
     </div>
   );
 }

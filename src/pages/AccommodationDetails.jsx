@@ -17,9 +17,11 @@ function AccommodationDetails() {
   useEffect(() => {
     // Vérifiez si selectedAccommodation est undefined
     if (selectedAccommodation === undefined) {
-      // Redirigez vers la page d'erreur si l'ID du logement n'est pas trouvé
-      navigate("/error");
+      if (!selectedAccommodation) {
+        navigate("/error");
     }
+      }
+      
   }, [id, selectedAccommodation, navigate]);
 
   if (!selectedAccommodation) {
@@ -53,6 +55,10 @@ function AccommodationDetails() {
                   {tag}
                 </span>
               ))}
+            </div>
+            <div className="description">
+              <h3>Description</h3>
+              <p>{description}</p>
             </div>
           </div>
           <div className="souContB">

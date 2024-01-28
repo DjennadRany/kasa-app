@@ -11,7 +11,19 @@
     width: 80%;
     margin: auto;
     border-radius: 1em;
-  
+    
+  img {
+    background-size: unset;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    border-radius: 1em;
+    object-fit: cover;
+  }
     h2 {
       color: #fff; // Couleur du texte
       font-size: 24px; // Taille du texte

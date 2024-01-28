@@ -2,19 +2,26 @@
 import React from 'react';
 import Accordion from "../components/Accordion";
 import Banner from '../components/Banner';
+import gar from '../assets/banner/img2.png'
 
 function About() {
+  const aboutImageURL = gar;
   return (
     <div>
-            <Banner text="A Propos" /><br></br>
+     <Banner image={aboutImageURL} text="Texte du banner" /><br></br>
       <div className="APropos">
-        <Accordion title="Fiabilité" items={["Hello"]} />
-        <Accordion title="Respect" items={["Hello"]} />
-        <Accordion title="Service" items={["Hello"]} />
-        <Accordion title="Sécurité" items={["Hello"]} />
+        <Accordion title="Fiabilité" items={["Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."]} />
+        <Accordion title="Respect" items={["La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."]} />
+        <Accordion title="Service" items={["La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."]} />
+        <Accordion title="Sécurité" items={["La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."]} />
       </div>
     </div>
   );
 }
 
 export default About;
+
+
+
+
+

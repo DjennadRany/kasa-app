@@ -6,7 +6,7 @@ import About from './pages/About';
 import AccommodationDetails from './pages/AccommodationDetails';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Error from './components/Error';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/my-kasa-app/" element={<Home />} />
           <Route path="/accommodation/:id" element={<AccommodationDetails />} />
           <Route path="/about" element={<About />} />
-          <Route path="/error" element={<Error />} />
+          <Route path="/accommodation/*" element={<Error />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />

@@ -4,7 +4,7 @@ import accommodationsData from "../data/accommodation.json";
 import Carousel from "../components/Carousel";
 import StarRating from "../components/StarRating";
 import Accordion from "../components/Accordion";
-import Error from "../components/Error";
+import Error from "../pages/Error";
 
 import "../styles/tamplets/AccommodationDetails.scss";
 
@@ -47,6 +47,7 @@ console.log('Je suis bien passé :', selectedAccommodation )
                 </span>
               ))}
             </div>
+
           </div>
           <div className="souContB">
             <div className="host-info">

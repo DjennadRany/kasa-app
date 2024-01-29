@@ -1,0 +1,44 @@
+// ErrorContainer.scss
+.error-container {
+  text-align: center;
+  color: #FF6060;
+  min-height: 39em;
+  position: relative;
+  display: block;
+
+
+
+  .error-message {
+    font-size: 16em;
+    margin: auto;
+
+    // Styles pour les écrans de taille moyenne (900px et moins)
+    @media (max-width: 900px) {
+      font-size: 8em; // Ajuster la taille du message pour les petits écrans
+    }
+  }
+
+  .error-title {
+    font-size: 36px;
+
+    font-family: "Montserrat";
+    font-weight: 900;
+
+
+    // Styles pour les écrans de taille moyenne (900px et moins)
+    @media (max-width: 900px) {
+      font-size: 24px; // Ajuster la taille du titre pour les petits écrans
+      margin: 1em auto; // Ajuster la marge pour les petits écrans
+    }
+  }
+
+  .additional-paragraph {
+    position: relative;
+    margin: 5em auto;
+
+    // Styles pour les écrans de taille moyenne (900px et moins)
+    @media (max-width: 900px) {
+      margin: 8em auto; // Ajuster la marge pour les petits écrans
+    }
+  }
+}

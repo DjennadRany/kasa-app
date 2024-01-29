@@ -1,32 +1,23 @@
-import React, { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 import accommodationsData from "../data/accommodation.json";
 import Carousel from "../components/Carousel";
 import StarRating from "../components/StarRating";
 import Accordion from "../components/Accordion";
+import Error from "../components/Error";
 
 import "../styles/tamplets/AccommodationDetails.scss";
 
 function AccommodationDetails() {
   const { id } = useParams();
-  const navigate = useNavigate();
+
   const selectedAccommodation = accommodationsData.find(
     (accommodation) => accommodation.id === id
   );
 
-  useEffect(() => {
-    // Vérifiez si selectedAccommodation est undefined
-    if (selectedAccommodation === undefined) {
-      if (!selectedAccommodation) {
-        navigate("/error");
-    }
-      }
-      
-  }, [id, selectedAccommodation, navigate]);
-
-  if (!selectedAccommodation) {
-    // Retournez quelque chose de différent si selectedAccommodation est undefined
-    return <div>Loading...</div>;
+  if (!selectedAccommodation || selectedAccommodation === undefined ) {
+console.log('Je suis bien passé :', selectedAccommodation )
+  return (<Error/>)
   }
 
   const {
@@ -56,10 +47,6 @@ function AccommodationDetails() {
                 </span>
               ))}
             </div>
-            <div className="description">
-              <h3>Description</h3>
-              <p>{description}</p>
-            </div>
           </div>
           <div className="souContB">
             <div className="host-info">
@@ -82,7 +69,7 @@ function AccommodationDetails() {
         <div></div>
       </div>
     );
-  }
+              }
 
 
 export default AccommodationDetails;

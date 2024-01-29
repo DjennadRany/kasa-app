@@ -1,31 +1,34 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.scss';
+
+import arrowRight from '../../assets/arrow-right.png';
 
 const Carousel = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    afterChange: (index) => {
-      setActiveIndex(index);
-    },
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   return (
     <div className="carousel-container">
-      <Slider {...settings}>
+      <div className="slider" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
         {images.map((image, index) => (
-          <div key={index} className={`carousel-slide ${activeIndex === index ? 'active' : ''}`}>
-            <img src={image} alt={`Slide ${index + 1}`} className={`carousel-slide ${activeIndex === index ? 'active' : ''}`}/>
+          <div key={index} className="slide">
+            <img src={image} alt={`Slide ${index + 1}`} />
           </div>
         ))}
-      </Slider>
+      </div>
+      <button className="prev" onClick={prevSlide}>
+        <img src={arrowRight} alt="Previous" />
+      </button>
+      <button className="next" onClick={nextSlide}>
+        <img src={arrowRight} alt="Next" />
+      </button>
     </div>
   );
 };

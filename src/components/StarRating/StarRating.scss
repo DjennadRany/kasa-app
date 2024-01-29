@@ -7,7 +7,9 @@
   .rating {
     background: #FF6060; // Couleur de remplissage des étoiles
   }
-
+.stars img {
+    width: 4em;
+}
   // Styles pour les écrans de taille moyenne (900px et moins)
   @media (max-width: 900px) {
     span{
